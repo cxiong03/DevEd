@@ -2,8 +2,10 @@ const express = require('express'); // We import the package
 const app = express(); // We execute it
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv/config');
 
+app.use(cors());
 app.use(bodyParser.json());
 
 // MIDDLEWARES - A FUNCTION THAT EXECUTES WHEN A SPECIFIC WHEN ROUTES ARE BEING HIT
